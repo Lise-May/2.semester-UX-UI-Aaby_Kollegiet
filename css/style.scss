@@ -1,0 +1,1620 @@
+/*---------- Sass Variabler --------- */
+$dark_green: #8db596;
+$light_green: #bedbbb;
+$light_brown: #92807a;
+$dark_brown: #707070;
+$text_dark: #1e1e1e;
+$text_light: #ededed;
+/*----------------------------------- */
+/*------------ general -------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+}
+p {
+    font-family: calibri;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+.facts_p {
+    padding: 20px 40px 50px 40px;
+}
+.layer {
+    height: 90px;
+    width: 100%;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    font-family: abel;
+    color: $text_light;
+    padding-top: 100px;
+    text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-family: abel;
+}
+h3 {
+    font-size: 1em;
+    color: $dark_green;
+    padding: 25px 0 5px 0;
+    font-family: abel;
+}
+h5 {
+    font-family: calibri;
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+h6 {
+    color: $text_dark;
+    display: block;
+    font-weight: lighter;
+    font-family: Abel;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 2px;
+}
+.facts_line {
+    height: 2px;
+    width: 30%;
+    background-color: $dark_green;
+    margin: 0 auto;
+}
+
+/* ------------------------------------ */
+/* ---------------- navigation -------- */
+.logo_nav_img {
+    position: absolute;
+    right: 5px;
+    width: 170px;
+}
+a {
+    color: $text_dark;
+    display: block;
+    font-weight: lighter;
+    font-family: Abel;
+    letter-spacing: 2px;
+}
+header {
+    background-color: $text_light;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    z-index: 3;
+}
+header ul {
+    background-color: $text_light;
+
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+}
+header li a {
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+header li a:hover,
+header .menu-btn:hover {
+    color: $dark_green;
+}
+header .logo {
+    display: block;
+    float: left;
+    padding: 5px 0 5px 20px;
+    text-decoration: none;
+}
+header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    background-color: $text_light;
+}
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+}
+header .menu-icon .navicon {
+    background: $dark_green;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 28px;
+}
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+    background: $dark_green;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+header .menu-icon .navicon:before {
+    top: 10px;
+}
+header .menu-icon .navicon:after {
+    top: -10px;
+}
+header .menu-btn {
+    display: none;
+}
+header .menu-btn:checked ~ .menu {
+    max-height: 260px;
+}
+header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-icon_white .navicon_white {
+    background: $text_light;
+}
+.opslagstavle_header {
+    background-color: $dark_green !important;
+}
+
+header .menu-icon_white .navicon_white:before,
+header .menu-icon_white .navicon_white:after {
+    background: $text_light !important;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu_white {
+    background-color: $dark_green !important;
+}
+
+.opslagstavle_header li a {
+    display: flex;
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+/* ------------------------------------ */
+/* ------------- main index ----------- */
+.index_header {
+    background-color: $dark_green;
+}
+.index_background {
+    background-color: $dark_green;
+}
+.index_main {
+    background-color: $dark_green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.flexbox_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.new_resident_h2,
+.current_resident_h2 {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    color: $text_light;
+    padding: 20px 0 10px 0;
+}
+.new_resident_img,
+.current_resident_img {
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.current_resident_img {
+    margin-bottom: 50px;
+}
+
+/* ---- main beboer opslagstavle ------ */
+/* -- main vaerelsestyoer og priser --- */
+.slideshow-container,
+.slideshow-container2,
+.slideshow-container3,
+.slideshow-container4 {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.mySlides,
+.mySlides2,
+.mySlides3,
+.mySlides4 {
+    display: flex;
+    display: none;
+    flex-direction: row;
+}
+.mySlides:first-child {
+    display: block;
+}
+.mySlides2:first-child {
+    display: block;
+}
+.mySlides3:first-child {
+    display: block;
+}
+.mySlides4:first-child {
+    display: block;
+}
+.slide_img,
+.slide_img2,
+.slide_img3,
+.slide_img4 {
+    width: 100%;
+    border: 1px solid $text_light;
+}
+.slide_img2,
+.slide_img3,
+.slide_img4 {
+    border: none;
+}
+.slider_information {
+    padding-left: 7%;
+    padding-top: 12%;
+}
+.prev,
+.next,
+.prev3,
+.next3,
+.prev4,
+.next4 {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -36%;
+    width: 15%;
+    padding: 16px;
+    color: $dark_green;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev4,
+.next4 {
+    margin-top: -36%;
+    width: 15%;
+}
+.prev2,
+.next2 {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -80% !important;
+    width: 15%;
+    padding: 16px;
+    color: $dark_green;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next,
+.next2,
+.next3,
+.next4 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev,
+.prev2,
+.prev3,
+.prev4 {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot,
+.dot2,
+.dot3,
+.dot4 {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: $light_green;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot4 {
+    margin-bottom: 30px;
+}
+.active,
+.dot:hover {
+    background-color: $dark_green;
+}
+.active2,
+.dot2:hover {
+    background-color: $dark_green;
+}
+.active3,
+.dot3:hover {
+    background-color: $dark_green;
+}
+.active4,
+.dot4:hover {
+    background-color: $dark_green;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.slideshow-container3 {
+    display: none;
+}
+.indretning,
+.vaerelsestyper {
+    text-align: center;
+}
+.facts_p {
+    padding: 20px 40px 50px 40px;
+}
+.layer2 {
+    background-color: $text_light;
+    margin: 30px 0 0 0;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------ */
+/* ---- login ------ */
+#loginform {
+    margin: 0 auto;
+}
+#passwordform {
+    margin-top: 10px;
+    text-align: center;
+}
+#passwordinput {
+    width: 200px;
+    height: 30px;
+    font-size: 30px;
+    border: 2px solid $light_green;
+    text-align: center;
+}
+#loginbutton {
+    width: 200px;
+    margin: 15px auto 15px auto;
+    background-color: $light_brown;
+    color: $text_light;
+    border: 0;
+    border-radius: 20px;
+    font-family: abel;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px;
+}
+.password_main {
+    justify-content: center;
+    height: 100vh;
+    background-color: $dark_green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.password_h1 {
+    padding: 0;
+}
+/* ------------------------------------ */
+/* ---- main beboer opslagstavle ------ */
+.opslagstavle_background {
+    background-color: $text_light;
+}
+.opslagstavle_section {
+    background-color: white;
+    margin: 2%;
+    width: 96%;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}
+.opslagstavle_section::-webkit-scrollbar {
+    width: 6px;
+    height: 12px;
+    background-color: transparent;
+}
+.opslagstavle_section::-webkit-scrollbar-thumb {
+    position: absolute;
+    background: $dark_brown;
+    border-radius: 20px;
+}
+.heading-box {
+    background-color: $dark_green;
+    color: $text_light;
+    border-radius: 20px;
+    font-family: abel;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    margin: 30px 2% 20px 2%;
+    width: 96%;
+}
+.borderline {
+    height: 2px;
+    background-color: $dark_green;
+    width: 100%;
+    margin: 5px 0 15px 0;
+}
+.user_profile_img,
+.logout_img {
+    width: 30px;
+    height: 30px;
+}
+.opslagstavle_section_ul {
+    background-color: white;
+    margin: 2%;
+    width: 96%;
+    padding: 10px;
+}
+.opslagstavle_menu_text {
+    align-items: center;
+}
+.opslagstavle_text,
+.opslagstavle_ul {
+    margin: 10px 0 10px 0;
+}
+.opslagstavle_ul {
+    font-family: calibri;
+    font-size: 14px;
+    color: #1e1e1e;
+    list-style-position: inside;
+}
+.opslagstavle_ul li {
+    margin: 10px;
+}
+
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ---- Main kommende beboer  ------ */
+.headerimg_dorm {
+    height: 390px;
+    background-image: url("../img/headerimg-kollegie.jpg");
+    background-position: center;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.underlay_filter {
+    background-color: $dark_brown;
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+    opacity: 0.5;
+}
+
+.header_dorm_h1 {
+    color: $text_light;
+    padding: 0;
+    text-transform: uppercase;
+    z-index: 1;
+    padding: 10px 0 25px 0;
+}
+
+.header_dorm_h2 {
+    color: $text_light;
+    font-weight: 100;
+    text-align: center;
+    z-index: 1;
+}
+
+.apply_btn {
+    background-color: $dark_green;
+    color: $text_light;
+    padding: 5px 32px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+}
+
+.apply_btn_anchor {
+    z-index: 1;
+}
+
+.info_dorm {
+    background-color: $dark_green;
+    padding: 20px 0 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "build_year apartments" "two_bed_apart one_bed_apart";
+}
+.build_year {
+    grid-area: build_year;
+}
+.apartments {
+    grid-area: apartments;
+}
+.two_bed_apart {
+    grid-area: two_bed_apart;
+}
+.one_bed_apart {
+    grid-area: one_bed_apart;
+}
+
+.info_header {
+    text-align: center;
+}
+
+.info_dorm_h2 {
+    color: $dark_brown;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+
+.info_dorm_h3 {
+    color: $text_light;
+    font-weight: 100;
+}
+/* ------------------------------------ */
+/* -- Fact Section - Kommende beboere-- */
+.fact_header,
+.facts_p {
+    color: $dark_brown;
+    text-align: center;
+    font-weight: 100;
+}
+
+.facts_h3 {
+    color: $dark_green;
+    padding: 25px 0 5px 0;
+}
+
+.facts_h2 {
+    font-size: 2em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.facts_line {
+    height: 2px;
+    width: 30%;
+    background-color: $dark_green;
+    margin: 0 auto;
+}
+
+.facts_p {
+    padding: 20px 40px 50px 40px;
+}
+
+/* ------------------------------------ */
+/* ----------- Om Fællesskabet -------- */
+
+.community {
+    background-image: url(../img/bagground-forside-beboer.jpg);
+    background-size: 250%;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.community_container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.community_header {
+    text-align: left;
+}
+
+.community_h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $text_light;
+    padding-bottom: 10px;
+}
+
+.community_h3 {
+    color: $light_green;
+    padding: 20px 0 0 0;
+}
+
+.community_line {
+    height: 2px;
+    width: 35%;
+    background-color: $light_green;
+}
+
+.community_p {
+    color: $text_light;
+    padding: 30px 0 30px 0;
+}
+
+.community_img {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/*---- Området ----*/
+#map {
+    width: 414px;
+    height: 300px;
+    margin: auto;
+}
+.area_h3 {
+    text-align: center;
+    color: $dark_green;
+    padding-top: 25px;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.area_h1 {
+    text-align: center;
+    color: $dark_brown;
+    text-transform: uppercase;
+    padding: 5px 0 5px 0;
+}
+.area_line {
+    height: 2px;
+    width: 20%;
+    background-color: $dark_green;
+    margin: 0 auto;
+}
+.area_p {
+    padding: 40px 40px 30px 40px;
+    text-align: center;
+}
+
+// Slideshow start - omraadet
+.slideshow-container,
+.slideshow-container2 {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 30px;
+}
+.mySlides,
+.mySlides2 {
+    display: flex;
+    display: none;
+    flex-direction: row;
+}
+.mySlides:first-child {
+    display: block;
+}
+.mySlides2:first-child {
+    display: block;
+}
+.slide_img,
+.slide_img2 {
+    width: 100%;
+}
+.slider_information {
+    padding-left: 7%;
+    padding-top: 12%;
+}
+.prev,
+.next,
+.prev2,
+.next2 {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -36%;
+    width: 15%;
+    padding: 16px;
+    color: $dark_green;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next,
+.next2 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev,
+.prev2 {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.dot,
+.dot2 {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: $light_green;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+    background-color: $dark_green;
+}
+.active2,
+.dot2:hover {
+    background-color: $dark_green;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*--- Slideshow stop - omraadet ---*/
+
+/*--- Location ---*/
+.location {
+    background-color: $dark_brown;
+    padding-left: 30px;
+}
+
+.location_h2 {
+    text-transform: uppercase;
+    color: $text_light;
+    padding: 0 0 10px 10px;
+    font-size: 2.5em;
+}
+
+.location_h3 {
+    color: $light_green;
+    padding: 20px 0 5px 10px;
+}
+
+.location_line {
+    height: 2px;
+    width: 35%;
+    background-color: $light_green;
+    margin-left: 10px;
+}
+.location_p {
+    margin: 15px 0 0 10px;
+    color: $text_light;
+}
+
+.location_list {
+    color: $text_light;
+    padding: 30px 0 40px 30px;
+}
+.location_item {
+    font-family: Abel;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/*-----------------*/
+/*--- Praktisk information ---*/
+.ansoeg-overskrift1 {
+    font-weight: 100;
+    color: #707070;
+    padding-top: 10px;
+    text-align: center;
+}
+.ansoeg-overskrift {
+    font-weight: 100;
+    color: $dark_green;
+    padding-top: 30px;
+    text-align: center;
+}
+.spoergmal-overskrift {
+    font-weight: 100;
+    color: #ededed;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+.kontakt-overskrift {
+    font-weight: 100;
+    color: #bedbbb;
+    padding-top: 5px;
+    text-align: center;
+}
+.gif-mobil {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+    position: relative;
+    width: 60%;
+    height: auto;
+}
+.gif-computer {
+    display: none;
+}
+/*contact us section */
+.contact-section {
+    background: url(..//img/bagground-forside-beboer.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+}
+.contact-section h1 {
+    text-align: center;
+    color: #ddd;
+}
+.border {
+    width: 100px;
+    height: 2px;
+    background: #bedbbb;
+    margin: 20px auto;
+    margin-bottom: 40px;
+}
+.contact-form {
+    max-width: 900px;
+    padding: 10px 10px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ededed;
+    margin: 16px 0;
+    background: rgb(255, 255, 255);
+    padding: 20px 40px;
+    outline: #8db596;
+    color: #ddd;
+    transition: 0.5s;
+}
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px #ededed;
+}
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: #8db596;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact-form-btn:hover {
+    background: #bedbbb;
+}
+
+.error_body {
+    margin: auto 5%;
+}
+
+.error_page {
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.error_btn {
+    width: 260px;
+    height: 40px;
+    margin: 5px auto 10px auto;
+    background-color: $light_brown;
+    color: $text_light;
+    border: 0;
+    border-radius: 20px;
+    font-family: abel;
+    font-size: 23px;
+    font-weight: 100;
+    padding: 5px;
+}
+.error_img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+}
+
+.error_title {
+    color: $text_dark;
+}
+
+/* ------------------------------------ */
+/* ---------------- footer ------------ */
+footer {
+    background: #8db596;
+    height: 100px;
+    width: 100%;
+    margin-top: -1px;
+    padding: 30px 20px 0 20px;
+}
+.footer_text {
+    font-family: abel;
+    color: $text_light !important;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+/* ------------------------------------ */
+/* --- mediaquery ipad og tablets ----- */
+@media screen and (min-width: 672px) and (max-width: 950px) {
+    /* --- main index (ipad og tablets) --- */
+    .logo_nav_img {
+        left: 5px;
+    }
+    .logo_nav_img {
+        position: relative;
+    }
+    .index_main {
+        justify-content: center;
+        height: 100vh;
+    }
+    .flexbox_profile {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .new_resident_h2,
+    .current_resident_h2 {
+        font-size: 25px;
+    }
+    .new_resident_img,
+    .current_resident_img {
+        width: 300px;
+    }
+    .current_resident_img {
+        margin-bottom: 0;
+    }
+    /* ------------------------------------ */
+    /*------------ general -------------- */
+    h1 {
+        padding-top: 0;
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    /* ------------------------------------ */
+    /* --- navigation (ipad og tablets) --- */
+    header li {
+        float: left;
+    }
+    header li a {
+        padding: 20px 10px 20px 10px;
+        font-size: 16px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-36%);
+        background-color: transparent;
+    }
+    header .menu-icon {
+        display: none;
+    }
+    header ul {
+        width: auto;
+    }
+    .logo_nav {
+        float: left;
+    }
+    .last_child {
+        padding-right: 5px;
+    }
+
+    /* -- main vaerelsestyper og priser (ipad og tablets) --- */
+    .slideshow-container2 {
+        display: none;
+    }
+    .slideshow-container3 {
+        display: block;
+    }
+    .prev,
+    .next {
+        margin-top: -34%;
+        font-size: 40px;
+    }
+    .prev3,
+    .next3 {
+        margin-top: -21%;
+        font-size: 40px;
+    }
+    /* ------------------------------------ */
+    /* ---- main beboer opslagstavle (ipad og tablets) ------ */
+    h6 {
+        font-size: 18px;
+    }
+    /* ------------------------------------ */
+    /* --Kommende beboer-- */
+    .headerimg_dorm {
+        height: 790px;
+    }
+
+    .underlay_filter {
+        top: 300px;
+        height: 400px;
+        width: 300px;
+    }
+
+    .header_dorm_h1 {
+        font-weight: 900;
+    }
+
+    .apply_btn {
+        padding: 10px 35px;
+        font-size: 1.5em;
+    }
+
+    /*--- Info Section ---*/
+
+    .grid-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /*--- Fact Section ---*/
+
+    .facts_line {
+        width: 20%;
+    }
+
+    /*--- community ---*/
+    .community {
+        height: 500px;
+        display: flex;
+        align-items: center;
+    }
+
+    .community_h3 {
+        padding-top: 0;
+    }
+
+    .community_line {
+        width: 25%;
+        margin: 0;
+    }
+    .community_p {
+        padding-bottom: 0;
+    }
+
+    .community_img {
+        object-fit: cover;
+        padding: 0;
+    }
+
+    .community_container {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .text_wrapper {
+        display: block;
+        padding: 25px;
+        width: 50%;
+    }
+    .img_wrapper {
+        padding: 25px;
+        width: 50%;
+    }
+
+    /* ------------------------------------ */
+    /* ------------------------------------ */
+    /*--- Omraade - area section ---*/
+    .area_line {
+        width: 30%;
+    }
+    .area_p {
+        padding: 50px 80px 40px 80px;
+    }
+    /* ------------------------------------ */
+
+    /*--- Omraade - location section ---*/
+    .location {
+        padding-left: 70px;
+    }
+    .location_h2 {
+        font-size: 4em;
+    }
+
+    .prev4,
+    .next4 {
+        margin-top: -32%;
+        font-size: 40px;
+    }
+
+    /*--- Omraade - map section ---*/
+    #map {
+        width: 100%;
+        height: 600px;
+    }
+
+    /* --- praktisk information (ipad og tablets) --- */
+    .contact-form {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .gif-mobil {
+        display: none;
+    }
+    .gif-computer {
+        width: 70%;
+        height: auto;
+        display: initial;
+        margin-left: 15%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .spoergmal-overskrift {
+        font-size: 3em;
+    }
+
+    .error_btn {
+        width: 245px;
+        margin: 5px 10px 10px auto;
+        font-size: 21px;
+    }
+
+    .error_img {
+        width: 70%;
+    }
+    /* --- footer (ipad og tablets) ------- */
+    footer {
+        padding: 40px 20px 0 20px;
+        height: 200px;
+    }
+}
+/* ------------------------------------ */
+/* ------ mediaquery desktop ---------- */
+@media screen and(min-width: 951px) {
+    /* ------- main index (desktop)-------- */
+    .logo_nav_img {
+        left: 5px;
+    }
+    .index_main {
+        justify-content: center;
+        height: 100vh;
+    }
+    .flexbox_profile {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    h1 {
+        padding-top: 0;
+        font-size: 3.5em;
+    }
+    .new_resident_h2,
+    .current_resident_h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .new_resident_img,
+    .current_resident_img {
+        width: 400px;
+        transition: transform 0.2s;
+        margin: 0;
+    }
+    .current_resident_img:hover {
+        transform: scale(1.1);
+        margin: 0;
+    }
+    .new_resident_img:hover {
+        transform: scale(1.1);
+        margin: 0;
+    }
+
+    /* ------------------------------------ */
+    /*------------ general -------------- */
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    /* ------------------------------------ */
+
+    /* ------------------------------------ */
+    /* ------- navigation (desktop) ------- */
+    header li {
+        float: left;
+    }
+    header li a {
+        padding-left: 30px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-36%);
+    }
+    header .menu-icon {
+        display: none;
+    }
+    header ul {
+        width: auto;
+    }
+    .logo_nav {
+        float: left;
+    }
+    .last_child {
+        padding-right: 5px;
+    }
+    /* --Kommende beboer-- */
+    /* --Kommende beboer-- */
+    .headerimg_dorm {
+        height: 1000px;
+        background-size: cover;
+    }
+
+    .underlay_filter {
+        top: 400px;
+        height: 500px;
+        width: 320px;
+    }
+
+    .header_dorm_h1 {
+        font-weight: 900;
+    }
+
+    .apply_btn {
+        padding: 10px 35px;
+        font-size: 1.5em;
+    }
+
+    /*--- Info Section ---*/
+
+    .grid-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /*--- Fact Section ---*/
+
+    .facts_line {
+        width: 10%;
+    }
+
+    .facts_p {
+        padding: 20px 80px 50px 80px;
+    }
+    /*--- community ---*/
+    .community {
+        height: 700px;
+        display: flex;
+        align-items: center;
+    }
+
+    .community_h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .community_line {
+        width: 40%;
+        padding: 0;
+    }
+    .community_p {
+        padding-bottom: 0;
+    }
+
+    .community_img {
+        object-fit: cover;
+        padding: 0;
+    }
+
+    .community_container {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .text_wrapper {
+        display: block;
+        padding: 50px;
+        width: 40%;
+    }
+    .img_wrapper {
+        padding: 50px;
+        width: 50%;
+    }
+    /* -- main vaerelsestyper og priser (desktop) --- */
+    .h3_vaerelsestyper {
+        margin-top: 20px;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    .layer2 {
+        padding-bottom: 30px;
+    }
+
+    .slideshow-container2 {
+        display: none;
+    }
+    .slideshow-container3 {
+        display: block;
+        padding-top: 40px;
+    }
+    .slide_img,
+    .slide_img3 {
+        width: 70%;
+    }
+    .indretning {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .prev,
+    .next {
+        margin-top: -24%;
+        width: 40%;
+        font-size: 40px;
+    }
+    .prev3,
+    .next3 {
+        margin-top: -14%;
+        width: 40%;
+        font-size: 40px;
+    }
+    .prev4,
+    .next4 {
+        font-size: 40px;
+    }
+    /* ------------------------------------ */
+    /* ---- main beboer opslagstavle (desktop) ------ */
+    .opslagstavle_grid {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-column-gap: 2%;
+        grid-row-gap: 2%;
+        padding: 2%;
+        grid-template-rows: 1fr 3fr 1fr 3fr;
+        margin-top: -2%;
+        width: 100%;
+        height: 100vh;
+        grid-template-areas:
+            "h4-1 h4-3"
+            "content-1 content-3"
+            "h4-2 content-3"
+            "content-2 content-3";
+    }
+    .h4-1 {
+        grid-area: h4-1;
+    }
+    .h4-2 {
+        grid-area: h4-2;
+    }
+    .h4-3 {
+        grid-area: h4-3;
+    }
+    .content-1 {
+        grid-area: content-1;
+        margin-top: 0;
+    }
+    .content-2 {
+        grid-area: content-2;
+        margin-top: 0;
+    }
+    .content-3 {
+        grid-area: content-3;
+        margin-top: 0;
+    }
+    .opslagstavle_section {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .heading-box {
+        margin: 58px 0 4px 0;
+        width: 350px;
+    }
+    .opslagstavle_section_ul {
+        margin: 0%;
+        width: 100%;
+    }
+
+    .opslagstavle_ul li {
+        margin: 30px;
+    }
+    .opslagstavle_ul {
+        font-size: 16px;
+    }
+    /* ------------------------------------ */
+
+    /* ------------------------------------ */
+    /*--- Omraade ---*/
+
+    .area_slideshow_container {
+        width: 50%;
+        margin: auto;
+    }
+    /*--- Area section ---*/
+    .area_p {
+        padding: 40px 0 30px 0;
+    }
+    .area_line {
+        width: 27%;
+    }
+    /*--- Slideshow section ---*/
+    .slideshow-container2 {
+        width: 100%;
+        padding-bottom: 40px;
+        margin: 0;
+    }
+
+    .prev2,
+    .next2 {
+        margin-top: -18%;
+        width: 45%;
+    }
+
+    .prev4,
+    .next4 {
+        margin-top: -17%;
+        width: 55%;
+    }
+    /*--- Map & location ---*/
+    .location_map_container {
+        display: flex;
+        width: 100%;
+    }
+    /*--- Location section ---*/
+    .location {
+        width: 30%;
+        height: 550px;
+    }
+    .location_h3 {
+        padding-top: 60px;
+    }
+
+    .location_h2 {
+        font-size: 3em;
+    }
+    .location_line {
+        width: 23%;
+    }
+    /*------------------------*/
+    /*----- Map section -----*/
+    .map_section {
+        width: 70%;
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    /*-----------------------*/
+    /* ------- praktisk information (desktop)-------- */
+    .contact-form {
+        margin: auto;
+    }
+    .gif-mobil {
+        display: none;
+    }
+    .gif-computer {
+        width: 70%;
+        height: auto;
+        display: initial;
+        margin-left: 15%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .spoergmal-overskrift {
+        font-size: 2.5em;
+    }
+    /* ------ mediaquery desktop ---------- */
+    .error_img {
+        width: 40%;
+    }
+
+    /* ------------------------------------ */
+    /* ---------- footer (desktop) -------- */
+    footer {
+        padding: 40px 20px 0 20px;
+    }
+}
+/* ------------------------------------ */
